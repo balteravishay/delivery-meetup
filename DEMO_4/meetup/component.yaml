@@ -1,0 +1,10 @@
+name: my-cluster
+subcomponents:
+  - name: efk # In-cluster monitoring and service-mesh tooling
+    source: https://github.com/microsoft/fabrikate-definitions.git
+    path: definitions/elasticsearch-filebeat-kibana
+    method: git
+  - name: bookinfo # Istio BookInfo application - wrapped in Fabrikate component
+    source: https://github.com/microsoft/fabrikate-definitions.git
+    path: definitions/fabrikate-bookinfo
+    method: git

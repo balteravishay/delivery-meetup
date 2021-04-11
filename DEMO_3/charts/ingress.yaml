@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: meetup
+  namespace: default
+  labels:
+    app: meetup
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - host: ""
+      http:
+        paths:
+          - backend:
+              serviceName: meetup
+              servicePort: 80
